@@ -14,9 +14,7 @@ class Get_Breaking_info:
         response = requests.get(url)
         if response.status_code == 200:
             data = response.json()
-            print(f"Fetch data:{data}")
             return data
         else:
             print("Failed to fetch data.")
             return False
-
