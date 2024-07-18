@@ -1,1 +1,1 @@
-from model.tidy_breaking_info_api import *
+from model.breaking_info_database_process import *
