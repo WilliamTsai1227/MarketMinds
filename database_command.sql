@@ -13,3 +13,7 @@ CREATE TABLE stock_breaking_info (
     title VARCHAR(200) NOT NULL,
 	content VARCHAR(10000) NOT NULL
 );
+
+ALTER TABLE stock_breaking_info CHANGE name stock_name VARCHAR(30) NOT NULL;
+SELECT * FROM stock_breaking_info;
+DESCRIBE stock_breaking_info;

@@ -1,1 +1,1 @@
-from model.breaking_info_database_process import *
+from model.breaking_info_database import *
