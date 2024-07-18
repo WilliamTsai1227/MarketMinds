@@ -24,3 +24,7 @@ config/credentials.yml
 # 臨時文件
 *.tmp
 *.bak
+
+# 特定的 SQL 文件
+database_command.sql
+
