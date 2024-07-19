@@ -33,5 +33,9 @@ class Get_Breaking_info:
             print("Failed to fetch data.")
             return False
         
-Get_Breaking_info.fetch_data()
+    # 定義定時任務
+    @staticmethod
+    def scheduled_job():
+        print("Fetching data at", datetime.now())
+        Get_Breaking_info.fetch_data()
 
