@@ -38,4 +38,4 @@ class Get_Breaking_info:
     def scheduled_job():
         print("Fetching data at", datetime.now())
         Get_Breaking_info.fetch_data()
-
+Get_Breaking_info.fetch_data()
