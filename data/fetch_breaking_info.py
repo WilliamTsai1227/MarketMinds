@@ -4,12 +4,9 @@ from apscheduler.schedulers.background import BackgroundScheduler
 from datetime import datetime
 import os
 import sys
-# 添加當前檔案所在目錄的父目錄到 Python 路徑
 current_dir = os.path.dirname(os.path.abspath(__file__))
 parent_dir = os.path.dirname(current_dir)
 sys.path.append(parent_dir)
-
-# 匯入 connection_pool 和 breaking_info_database 模組
 from model.connection_pool import connection_pool
 from model.breaking_info_database import Breaking_info_database
 

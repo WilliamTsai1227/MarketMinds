@@ -9,6 +9,7 @@ current_dir = os.path.dirname(os.path.abspath(__file__))
 parent_dir = os.path.dirname(current_dir)
 sys.path.append(parent_dir)
 from model.connection_pool import connection_pool
+from model.stock_price_database import Stock_price_database
 import json
 
 #上市個股日收盤價及月平均價
@@ -41,12 +42,12 @@ class Get_Stock_price:
     @staticmethod
     def yahoo_fetch_data(stock_id,stock_name):
         stock_id = '2330'+'.TW'
-        # 設定開始與結束時間
+        # 設定抓取範圍
         end = datetime.today()
         start = end - timedelta(days=360)
         stock_data = yf.download(stock_id, start = start, end = end)
         stock_id = stock_id.split(".")[0]
-        Get_Stock_price.save_to_database(stock_id,stock_name,stock_data)
+        Stock_price_database.insert_data(stock_id,stock_name,stock_data)
 
 
 
